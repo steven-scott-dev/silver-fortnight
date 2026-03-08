@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Help Guide</title>
+<style>
+:root {
+  --bg:#f4f8ff; --card:#ffffff; --line:#d9e3ef; --text:#132238; --muted:#5a6c84;
+  --blue:#2563eb; --blue2:#eaf2ff; --red:#dc2626; --gold:#fff7ed;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#eef5ff 0%,#f8fbff 100%);color:var(--text)}
+.wrap{max-width:900px;margin:0 auto;padding:18px}
+.hero{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 12px 28px rgba(15,23,42,.08);margin-bottom:18px}
+h1{margin:.1rem 0 .4rem;font-size:clamp(2rem,6vw,3rem)}
+.sub{font-size:1.1rem;color:var(--muted);margin:0}
+.note,.bookmarks{border-radius:18px;padding:14px 16px;margin-top:14px;font-size:1.02rem}
+.note{background:#fff7ed;border:2px solid #fdba74}
+.bookmarks{background:#ecfeff;border:2px solid #99f6e4}
+.progress{margin:14px 0 10px;font-size:.98rem;color:var(--muted)}
+.screen{display:none;background:var(--card);border:2px solid var(--line);border-radius:24px;padding:16px;box-shadow:0 12px 28px rgba(15,23,42,.08)}
+.screen.active{display:block}
+.badge{display:inline-block;background:var(--red);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;margin-bottom:10px}
+h2{font-size:clamp(1.6rem,5vw,2.4rem);margin:.2rem 0 .6rem}
+.instruction{font-size:1.16rem;background:var(--blue2);border:2px solid #bfdbfe;border-radius:18px;padding:14px 16px;margin:0 0 14px;font-weight:700}
+.image-card{background:#fbfdff;border:2px solid var(--line);border-radius:20px;padding:10px}
+.image-card img{display:block;width:100%;height:auto;border-radius:14px}
+.actions{display:flex;gap:12px;justify-content:space-between;margin-top:16px}
+button{appearance:none;border:none;border-radius:18px;padding:16px 18px;font-size:1.05rem;font-weight:700;cursor:pointer}
+.next{background:var(--blue);color:#fff;flex:1}
+.secondary{background:#eef2f7;color:#132238;min-width:120px}
+.footer-note{text-align:center;color:var(--muted);padding:18px 0 8px;font-size:.95rem}
+@media (max-width:680px){
+  .wrap{padding:12px} .hero,.screen{border-radius:20px} .actions{flex-direction:column} .secondary{min-width:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <h1>Computer Help Guide</h1>
+    <p class="sub">Step-by-step help for removing OneLaunch, making Chrome your default browser, setting Highland as the startup page, and adding Highland to the desktop.</p>
+    <div class="note"><strong>Favorites / bookmarks:</strong> Your Chrome bookmarks should stay in Chrome. Removing OneLaunch and making Chrome the default browser should not erase Chrome bookmarks.</div>
+    <div class="bookmarks"><strong>If Chrome is missing:</strong> Install Google Chrome first. After Chrome is installed, come back to this guide.</div>
+    <div class="progress" id="progressText">Step 1 of 26</div>
+  </section>
+  
+<section class="screen active" data-step="0">
+  <div class="badge">1 of 1</div>
+  <h2>Check if Chrome is already installed</h2>
+  <p class="instruction">Look for Google Chrome in Installed apps. If you see it, you are ready. If you do not see it, install Chrome first.</p>
+  <div class="image-card">
+    <img src="./images/verify-chrome-installed.jpg" alt="Check if Chrome is already installed 1 of 1">
+  </div>
+  <div class="actions"><button class="next" data-go="1">Next</button></div>
+</section>
+
+<section class="screen" data-step="1">
+  <div class="badge">1 of 8</div>
+  <h2>Remove OneLaunch</h2>
+  <p class="instruction">Click the Start button.</p>
+  <div class="image-card">
+    <img src="./images/start-button.jpg" alt="Remove OneLaunch 1 of 8">
+  </div>
+  <div class="actions"><button class="secondary" data-go="0">Back</button><button class="next" data-go="2">Next</button></div>
+</section>
+
+<section class="screen" data-step="2">
+  <div class="badge">2 of 8</div>
+  <h2>Remove OneLaunch</h2>
+  <p class="instruction">Click Settings.</p>
+  <div class="image-card">
+    <img src="./images/settings-from-start.jpg" alt="Remove OneLaunch 2 of 8">
+  </div>
+  <div class="actions"><button class="secondary" data-go="1">Back</button><button class="next" data-go="3">Next</button></div>
+</section>
+
+<section class="screen" data-step="3">
+  <div class="badge">3 of 8</div>
+  <h2>Remove OneLaunch</h2>
+  <p class="instruction">Click Apps.</p>
+  <div class="image-card">
+    <img src="./images/apps-left-menu.jpg" alt="Remove OneLaunch 3 of 8">
+  </div>
+  <div class="actions"><button class="secondary" data-go="2">Back</button><button class="next" data-go="4">Next</button></div>
+</section>
+
+<section class="screen" data-step="4">
+  <div class="badge">4 of 8</div>
+  <h2>Remove OneLaunch</h2>
+  <p class="instruction">Click Installed apps.</p>
+  <div class="image-card">
+    <img src="./images/installed-apps.jpg" alt="Remove OneLaunch 4 of 8">
+  </div>
+  <div class="actions"><button class="secondary" data-go="3">Back</button><button class="next" data-go="5">Next</button></div>
+</section>
+
+<section class="screen" data-step="5">
+  <div class="badge">5 of 8</div>
+  <h2>Remove OneLaunch</h2>
+  <p class="instruction">Find OneLaunch.</p>
+  <div class="image-card">
+    <img src="./images/find-onelaunch.jpg" alt="Remove OneLaunch 5 of 8">
+  </div>
+  <div class="actions"><button class="secondary" data-go="4">Back</button><button class="next" data-go="6">Next</button></div>
+</section>
+
+<section class="screen" data-step="6">
+  <div class="badge">6 of 8</div>
+  <h2>Remove OneLaunch</h2>
+  <p class="instruction">Click the 3 dots next to OneLaunch.</p>
+  <div class="image-card">
+    <img src="./images/onelaunch-3-dots.jpg" alt="Remove OneLaunch 6 of 8">
+  </div>
+  <div class="actions"><button class="secondary" data-go="5">Back</button><button class="next" data-go="7">Next</button></div>
+</section>
+
+<section class="screen" data-step="7">
+  <div class="badge">7 of 8</div>
+  <h2>Remove OneLaunch</h2>
+  <p class="instruction">Click Uninstall.</p>
+  <div class="image-card">
+    <img src="./images/uninstall-menu.jpg" alt="Remove OneLaunch 7 of 8">
+  </div>
+  <div class="actions"><button class="secondary" data-go="6">Back</button><button class="next" data-go="8">Next</button></div>
+</section>
+
+<section class="screen" data-step="8">
+  <div class="badge">8 of 8</div>
+  <h2>Remove OneLaunch</h2>
+  <p class="instruction">Click Uninstall again.</p>
+  <div class="image-card">
+    <img src="./images/confirm-uninstall.jpg" alt="Remove OneLaunch 8 of 8">
+  </div>
+  <div class="actions"><button class="secondary" data-go="7">Back</button><button class="next" data-go="9">Next</button></div>
+</section>
+
+<section class="screen" data-step="9">
+  <div class="badge">1 of 7</div>
+  <h2>Make Chrome the default browser</h2>
+  <p class="instruction">Click Start.</p>
+  <div class="image-card">
+    <img src="./images/start-button.jpg" alt="Make Chrome the default browser 1 of 7">
+  </div>
+  <div class="actions"><button class="secondary" data-go="8">Back</button><button class="next" data-go="10">Next</button></div>
+</section>
+
+<section class="screen" data-step="10">
+  <div class="badge">2 of 7</div>
+  <h2>Make Chrome the default browser</h2>
+  <p class="instruction">Click Settings.</p>
+  <div class="image-card">
+    <img src="./images/settings-from-start.jpg" alt="Make Chrome the default browser 2 of 7">
+  </div>
+  <div class="actions"><button class="secondary" data-go="9">Back</button><button class="next" data-go="11">Next</button></div>
+</section>
+
+<section class="screen" data-step="11">
+  <div class="badge">3 of 7</div>
+  <h2>Make Chrome the default browser</h2>
+  <p class="instruction">Click Apps.</p>
+  <div class="image-card">
+    <img src="./images/apps-left-menu.jpg" alt="Make Chrome the default browser 3 of 7">
+  </div>
+  <div class="actions"><button class="secondary" data-go="10">Back</button><button class="next" data-go="12">Next</button></div>
+</section>
+
+<section class="screen" data-step="12">
+  <div class="badge">4 of 7</div>
+  <h2>Make Chrome the default browser</h2>
+  <p class="instruction">Click Default apps.</p>
+  <div class="image-card">
+    <img src="./images/default-apps.jpg" alt="Make Chrome the default browser 4 of 7">
+  </div>
+  <div class="actions"><button class="secondary" data-go="11">Back</button><button class="next" data-go="13">Next</button></div>
+</section>
+
+<section class="screen" data-step="13">
+  <div class="badge">5 of 7</div>
+  <h2>Make Chrome the default browser</h2>
+  <p class="instruction">Search for Chrome if needed, then click Google Chrome.</p>
+  <div class="image-card">
+    <img src="./images/select-chrome.jpg" alt="Make Chrome the default browser 5 of 7">
+  </div>
+  <div class="actions"><button class="secondary" data-go="12">Back</button><button class="next" data-go="14">Next</button></div>
+</section>
+
+<section class="screen" data-step="14">
+  <div class="badge">6 of 7</div>
+  <h2>Make Chrome the default browser</h2>
+  <p class="instruction">Make sure HTTP and HTTPS say Google Chrome.</p>
+  <div class="image-card">
+    <img src="./images/chrome-http-https.jpg" alt="Make Chrome the default browser 6 of 7">
+  </div>
+  <div class="actions"><button class="secondary" data-go="13">Back</button><button class="next" data-go="15">Next</button></div>
+</section>
+
+<section class="screen" data-step="15">
+  <div class="badge">7 of 7</div>
+  <h2>Make Chrome the default browser</h2>
+  <p class="instruction">Chrome is now your default browser.</p>
+  <div class="image-card">
+    <img src="./images/select-chrome.jpg" alt="Make Chrome the default browser 7 of 7">
+  </div>
+  <div class="actions"><button class="secondary" data-go="14">Back</button><button class="next" data-go="16">Next</button></div>
+</section>
+
+<section class="screen" data-step="16">
+  <div class="badge">1 of 6</div>
+  <h2>Set Highland as the startup page</h2>
+  <p class="instruction">Open Google Chrome.</p>
+  <div class="image-card">
+    <img src="./images/open-chrome.jpg" alt="Set Highland as the startup page 1 of 6">
+  </div>
+  <div class="actions"><button class="secondary" data-go="15">Back</button><button class="next" data-go="17">Next</button></div>
+</section>
+
+<section class="screen" data-step="17">
+  <div class="badge">2 of 6</div>
+  <h2>Set Highland as the startup page</h2>
+  <p class="instruction">Click the 3 dots.</p>
+  <div class="image-card">
+    <img src="./images/chrome-three-dots.jpg" alt="Set Highland as the startup page 2 of 6">
+  </div>
+  <div class="actions"><button class="secondary" data-go="16">Back</button><button class="next" data-go="18">Next</button></div>
+</section>
+
+<section class="screen" data-step="18">
+  <div class="badge">3 of 6</div>
+  <h2>Set Highland as the startup page</h2>
+  <p class="instruction">Click Settings.</p>
+  <div class="image-card">
+    <img src="./images/chrome-settings-menu.jpg" alt="Set Highland as the startup page 3 of 6">
+  </div>
+  <div class="actions"><button class="secondary" data-go="17">Back</button><button class="next" data-go="19">Next</button></div>
+</section>
+
+<section class="screen" data-step="19">
+  <div class="badge">4 of 6</div>
+  <h2>Set Highland as the startup page</h2>
+  <p class="instruction">Under On startup, choose Open a specific page or set of pages.</p>
+  <div class="image-card">
+    <img src="./images/on-startup-specific-page.jpg" alt="Set Highland as the startup page 4 of 6">
+  </div>
+  <div class="actions"><button class="secondary" data-go="18">Back</button><button class="next" data-go="20">Next</button></div>
+</section>
+
+<section class="screen" data-step="20">
+  <div class="badge">5 of 6</div>
+  <h2>Set Highland as the startup page</h2>
+  <p class="instruction">Click Add a new page.</p>
+  <div class="image-card">
+    <img src="./images/add-new-page.jpg" alt="Set Highland as the startup page 5 of 6">
+  </div>
+  <div class="actions"><button class="secondary" data-go="19">Back</button><button class="next" data-go="21">Next</button></div>
+</section>
+
+<section class="screen" data-step="21">
+  <div class="badge">6 of 6</div>
+  <h2>Set Highland as the startup page</h2>
+  <p class="instruction">Type https://www.highland.net and click Add.</p>
+  <div class="image-card">
+    <img src="./images/type-highland-url.jpg" alt="Set Highland as the startup page 6 of 6">
+  </div>
+  <div class="actions"><button class="secondary" data-go="20">Back</button><button class="next" data-go="22">Next</button></div>
+</section>
+
+<section class="screen" data-step="22">
+  <div class="badge">1 of 4</div>
+  <h2>Add Highland to the desktop</h2>
+  <p class="instruction">Open https://www.highland.net in Chrome.</p>
+  <div class="image-card">
+    <img src="./images/open-highland-site.jpg" alt="Add Highland to the desktop 1 of 4">
+  </div>
+  <div class="actions"><button class="secondary" data-go="21">Back</button><button class="next" data-go="23">Next</button></div>
+</section>
+
+<section class="screen" data-step="23">
+  <div class="badge">2 of 4</div>
+  <h2>Add Highland to the desktop</h2>
+  <p class="instruction">Click the 3 dots, then click Cast, save, and share.</p>
+  <div class="image-card">
+    <img src="./images/cast-save-share.jpg" alt="Add Highland to the desktop 2 of 4">
+  </div>
+  <div class="actions"><button class="secondary" data-go="22">Back</button><button class="next" data-go="24">Next</button></div>
+</section>
+
+<section class="screen" data-step="24">
+  <div class="badge">3 of 4</div>
+  <h2>Add Highland to the desktop</h2>
+  <p class="instruction">Click Create shortcut.</p>
+  <div class="image-card">
+    <img src="./images/create-shortcut-menu.jpg" alt="Add Highland to the desktop 3 of 4">
+  </div>
+  <div class="actions"><button class="secondary" data-go="23">Back</button><button class="next" data-go="25">Next</button></div>
+</section>
+
+<section class="screen" data-step="25">
+  <div class="badge">4 of 4</div>
+  <h2>Add Highland to the desktop</h2>
+  <p class="instruction">Click Create.</p>
+  <div class="image-card">
+    <img src="./images/create-shortcut-confirm.jpg" alt="Add Highland to the desktop 4 of 4">
+  </div>
+  <div class="actions"><button class="secondary" data-go="24">Back</button></div>
+</section>
+
+  <div class="footer-note">Windows 11 • Chrome • Grandma version</div>
+</div>
+<script>
+const screens = Array.from(document.querySelectorAll('.screen'));
+const progressText = document.getElementById('progressText');
+function showStep(i){
+  screens.forEach((s, idx) => s.classList.toggle('active', idx === i));
+  progressText.textContent = 'Step ' + (i + 1) + ' of ' + screens.length;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('button[data-go]');
+  if (!btn) return;
+  showStep(Number(btn.getAttribute('data-go')));
+});
+</script>
+</body>
+</html>
