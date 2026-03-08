@@ -14,7 +14,6 @@
   --blue:#2563eb;
   --blue2:#eaf2ff;
   --red:#dc2626;
-  --gold:#fff7ed;
 }
 *{box-sizing:border-box}
 body{
@@ -44,21 +43,6 @@ h1{
   font-size:1.1rem;
   color:var(--muted);
   margin:0;
-}
-.note,
-.bookmarks{
-  border-radius:18px;
-  padding:14px 16px;
-  margin-top:14px;
-  font-size:1.02rem;
-}
-.note{
-  background:#fff7ed;
-  border:2px solid #fdba74;
-}
-.bookmarks{
-  background:#ecfeff;
-  border:2px solid #99f6e4;
 }
 .progress{
   margin:14px 0 10px;
@@ -153,24 +137,29 @@ button{
 <div class="wrap">
   <section class="hero">
     <h1>Computer Help Guide</h1>
-    <p class="sub">Step-by-step help for making Chrome your default browser, removing OneLaunch, setting Highland as the startup page, and adding Highland to the desktop.</p>
-
-    <div class="note">
-      <strong>Favorites / bookmarks:</strong> Your Chrome bookmarks should stay in Chrome. Changing the default browser and removing OneLaunch should not erase Chrome bookmarks.
-    </div>
-
-    <div class="bookmarks">
-      <strong>First check:</strong> If Google Chrome is missing, install Google Chrome first. After it is installed, come back to this guide.
-    </div>
-
+    <p class="sub">Follow the steps one at a time.</p>
+    <div class="progress" id="progressText">Step 1 of 25</div>
+  </section>
 
   <!-- MAKE CHROME DEFAULT -->
-  <section class="screen" data-step="1">
+  <section class="screen active" data-step="0">
     <div class="badge">1 of 7</div>
     <h2>Make Chrome the default browser</h2>
     <p class="instruction">Click Start.</p>
     <div class="image-card">
       <img src="./images/start-button.jpg" alt="Click Start">
+    </div>
+    <div class="actions">
+      <button class="next" data-go="1">Next</button>
+    </div>
+  </section>
+
+  <section class="screen" data-step="1">
+    <div class="badge">2 of 7</div>
+    <h2>Make Chrome the default browser</h2>
+    <p class="instruction">Click Settings.</p>
+    <div class="image-card">
+      <img src="./images/settings-from-start.jpg" alt="Click Settings">
     </div>
     <div class="actions">
       <button class="secondary" data-go="0">Back</button>
@@ -179,11 +168,11 @@ button{
   </section>
 
   <section class="screen" data-step="2">
-    <div class="badge">2 of 7</div>
+    <div class="badge">3 of 7</div>
     <h2>Make Chrome the default browser</h2>
-    <p class="instruction">Click Settings.</p>
+    <p class="instruction">Click Apps.</p>
     <div class="image-card">
-      <img src="./images/settings-from-start.jpg" alt="Click Settings">
+      <img src="./images/apps-left-menu.jpg" alt="Click Apps">
     </div>
     <div class="actions">
       <button class="secondary" data-go="1">Back</button>
@@ -192,11 +181,11 @@ button{
   </section>
 
   <section class="screen" data-step="3">
-    <div class="badge">3 of 7</div>
+    <div class="badge">4 of 7</div>
     <h2>Make Chrome the default browser</h2>
-    <p class="instruction">Click Apps.</p>
+    <p class="instruction">Click Default apps.</p>
     <div class="image-card">
-      <img src="./images/apps-left-menu.jpg" alt="Click Apps">
+      <img src="./images/default-apps.jpg" alt="Click Default apps">
     </div>
     <div class="actions">
       <button class="secondary" data-go="2">Back</button>
@@ -205,11 +194,11 @@ button{
   </section>
 
   <section class="screen" data-step="4">
-    <div class="badge">4 of 7</div>
+    <div class="badge">5 of 7</div>
     <h2>Make Chrome the default browser</h2>
-    <p class="instruction">Click Default apps.</p>
+    <p class="instruction">Search for Chrome if needed, then click Google Chrome.</p>
     <div class="image-card">
-      <img src="./images/default-apps.jpg" alt="Click Default apps">
+      <img src="./images/select-chrome.jpg" alt="Select Google Chrome">
     </div>
     <div class="actions">
       <button class="secondary" data-go="3">Back</button>
@@ -218,11 +207,11 @@ button{
   </section>
 
   <section class="screen" data-step="5">
-    <div class="badge">5 of 7</div>
+    <div class="badge">6 of 7</div>
     <h2>Make Chrome the default browser</h2>
-    <p class="instruction">Search for Chrome if needed, then click Google Chrome.</p>
+    <p class="instruction">Make sure HTTP and HTTPS say Google Chrome.</p>
     <div class="image-card">
-      <img src="./images/select-chrome.jpg" alt="Select Google Chrome">
+      <img src="./images/chrome-http-https.jpg" alt="Make sure HTTP and HTTPS use Chrome">
     </div>
     <div class="actions">
       <button class="secondary" data-go="4">Back</button>
@@ -231,19 +220,6 @@ button{
   </section>
 
   <section class="screen" data-step="6">
-    <div class="badge">6 of 7</div>
-    <h2>Make Chrome the default browser</h2>
-    <p class="instruction">Make sure HTTP and HTTPS say Google Chrome.</p>
-    <div class="image-card">
-      <img src="./images/chrome-http-https.jpg" alt="Make sure HTTP and HTTPS use Chrome">
-    </div>
-    <div class="actions">
-      <button class="secondary" data-go="5">Back</button>
-      <button class="next" data-go="7">Next</button>
-    </div>
-  </section>
-
-  <section class="screen" data-step="7">
     <div class="badge">7 of 7</div>
     <h2>Make Chrome the default browser</h2>
     <p class="instruction">Chrome is now your default browser.</p>
@@ -251,18 +227,30 @@ button{
       <img src="./images/select-chrome.jpg" alt="Chrome is the default browser">
     </div>
     <div class="actions">
-      <button class="secondary" data-go="6">Back</button>
-      <button class="next" data-go="8">Next</button>
+      <button class="secondary" data-go="5">Back</button>
+      <button class="next" data-go="7">Next</button>
     </div>
   </section>
-
-  <!-- DELETE ONELAUNCH -->
-  <section class="screen" data-step="8">
+  <!-- REMOVE ONELAUNCH -->
+  <section class="screen" data-step="7">
     <div class="badge">1 of 8</div>
     <h2>Remove OneLaunch</h2>
     <p class="instruction">Click Start.</p>
     <div class="image-card">
       <img src="./images/start-button.jpg" alt="Click Start">
+    </div>
+    <div class="actions">
+      <button class="secondary" data-go="6">Back</button>
+      <button class="next" data-go="8">Next</button>
+    </div>
+  </section>
+
+  <section class="screen" data-step="8">
+    <div class="badge">2 of 8</div>
+    <h2>Remove OneLaunch</h2>
+    <p class="instruction">Click Settings.</p>
+    <div class="image-card">
+      <img src="./images/settings-from-start.jpg" alt="Click Settings">
     </div>
     <div class="actions">
       <button class="secondary" data-go="7">Back</button>
@@ -271,11 +259,11 @@ button{
   </section>
 
   <section class="screen" data-step="9">
-    <div class="badge">2 of 8</div>
+    <div class="badge">3 of 8</div>
     <h2>Remove OneLaunch</h2>
-    <p class="instruction">Click Settings.</p>
+    <p class="instruction">Click Apps.</p>
     <div class="image-card">
-      <img src="./images/settings-from-start.jpg" alt="Click Settings">
+      <img src="./images/apps-left-menu.jpg" alt="Click Apps">
     </div>
     <div class="actions">
       <button class="secondary" data-go="8">Back</button>
@@ -284,11 +272,11 @@ button{
   </section>
 
   <section class="screen" data-step="10">
-    <div class="badge">3 of 8</div>
+    <div class="badge">4 of 8</div>
     <h2>Remove OneLaunch</h2>
-    <p class="instruction">Click Apps.</p>
+    <p class="instruction">Click Installed apps.</p>
     <div class="image-card">
-      <img src="./images/apps-left-menu.jpg" alt="Click Apps">
+      <img src="./images/installed-apps.jpg" alt="Click Installed apps">
     </div>
     <div class="actions">
       <button class="secondary" data-go="9">Back</button>
@@ -297,11 +285,11 @@ button{
   </section>
 
   <section class="screen" data-step="11">
-    <div class="badge">4 of 8</div>
+    <div class="badge">5 of 8</div>
     <h2>Remove OneLaunch</h2>
-    <p class="instruction">Click Installed apps.</p>
+    <p class="instruction">Find OneLaunch.</p>
     <div class="image-card">
-      <img src="./images/installed-apps.jpg" alt="Click Installed apps">
+      <img src="./images/find-onelaunch.jpg" alt="Find OneLaunch">
     </div>
     <div class="actions">
       <button class="secondary" data-go="10">Back</button>
@@ -310,11 +298,11 @@ button{
   </section>
 
   <section class="screen" data-step="12">
-    <div class="badge">5 of 8</div>
+    <div class="badge">6 of 8</div>
     <h2>Remove OneLaunch</h2>
-    <p class="instruction">Find OneLaunch.</p>
+    <p class="instruction">Click the 3 dots next to OneLaunch.</p>
     <div class="image-card">
-      <img src="./images/find-onelaunch.jpg" alt="Find OneLaunch">
+      <img src="./images/onelaunch-3-dots.jpg" alt="Click the 3 dots">
     </div>
     <div class="actions">
       <button class="secondary" data-go="11">Back</button>
@@ -323,11 +311,11 @@ button{
   </section>
 
   <section class="screen" data-step="13">
-    <div class="badge">6 of 8</div>
+    <div class="badge">7 of 8</div>
     <h2>Remove OneLaunch</h2>
-    <p class="instruction">Click the 3 dots next to OneLaunch.</p>
+    <p class="instruction">Click Uninstall.</p>
     <div class="image-card">
-      <img src="./images/onelaunch-3-dots.jpg" alt="Click the 3 dots">
+      <img src="./images/uninstall-menu.jpg" alt="Click Uninstall">
     </div>
     <div class="actions">
       <button class="secondary" data-go="12">Back</button>
@@ -336,19 +324,6 @@ button{
   </section>
 
   <section class="screen" data-step="14">
-    <div class="badge">7 of 8</div>
-    <h2>Remove OneLaunch</h2>
-    <p class="instruction">Click Uninstall.</p>
-    <div class="image-card">
-      <img src="./images/uninstall-menu.jpg" alt="Click Uninstall">
-    </div>
-    <div class="actions">
-      <button class="secondary" data-go="13">Back</button>
-      <button class="next" data-go="15">Next</button>
-    </div>
-  </section>
-
-  <section class="screen" data-step="15">
     <div class="badge">8 of 8</div>
     <h2>Remove OneLaunch</h2>
     <p class="instruction">Click Uninstall again.</p>
@@ -356,18 +331,31 @@ button{
       <img src="./images/confirm-uninstall.jpg" alt="Confirm uninstall">
     </div>
     <div class="actions">
-      <button class="secondary" data-go="14">Back</button>
-      <button class="next" data-go="16">Next</button>
+      <button class="secondary" data-go="13">Back</button>
+      <button class="next" data-go="15">Next</button>
     </div>
   </section>
 
   <!-- SET HOMEPAGE -->
-  <section class="screen" data-step="16">
+  <section class="screen" data-step="15">
     <div class="badge">1 of 6</div>
     <h2>Set Highland as the startup page</h2>
     <p class="instruction">Open Google Chrome.</p>
     <div class="image-card">
       <img src="./images/open-chrome.jpg" alt="Open Google Chrome">
+    </div>
+    <div class="actions">
+      <button class="secondary" data-go="14">Back</button>
+      <button class="next" data-go="16">Next</button>
+    </div>
+  </section>
+
+  <section class="screen" data-step="16">
+    <div class="badge">2 of 6</div>
+    <h2>Set Highland as the startup page</h2>
+    <p class="instruction">Click the 3 dots.</p>
+    <div class="image-card">
+      <img src="./images/chrome-three-dots.jpg" alt="Click the 3 dots in Chrome">
     </div>
     <div class="actions">
       <button class="secondary" data-go="15">Back</button>
@@ -376,11 +364,11 @@ button{
   </section>
 
   <section class="screen" data-step="17">
-    <div class="badge">2 of 6</div>
+    <div class="badge">3 of 6</div>
     <h2>Set Highland as the startup page</h2>
-    <p class="instruction">Click the 3 dots.</p>
+    <p class="instruction">Click Settings.</p>
     <div class="image-card">
-      <img src="./images/chrome-three-dots.jpg" alt="Click the 3 dots in Chrome">
+      <img src="./images/chrome-settings-menu.jpg" alt="Click Chrome Settings">
     </div>
     <div class="actions">
       <button class="secondary" data-go="16">Back</button>
@@ -389,11 +377,11 @@ button{
   </section>
 
   <section class="screen" data-step="18">
-    <div class="badge">3 of 6</div>
+    <div class="badge">4 of 6</div>
     <h2>Set Highland as the startup page</h2>
-    <p class="instruction">Click Settings.</p>
+    <p class="instruction">Under On startup, choose Open a specific page or set of pages.</p>
     <div class="image-card">
-      <img src="./images/chrome-settings-menu.jpg" alt="Click Chrome Settings">
+      <img src="./images/on-startup-specific-page.jpg" alt="Choose Open a specific page">
     </div>
     <div class="actions">
       <button class="secondary" data-go="17">Back</button>
@@ -402,11 +390,11 @@ button{
   </section>
 
   <section class="screen" data-step="19">
-    <div class="badge">4 of 6</div>
+    <div class="badge">5 of 6</div>
     <h2>Set Highland as the startup page</h2>
-    <p class="instruction">Under On startup, choose Open a specific page or set of pages.</p>
+    <p class="instruction">Click Add a new page.</p>
     <div class="image-card">
-      <img src="./images/on-startup-specific-page.jpg" alt="Choose Open a specific page">
+      <img src="./images/add-new-page.jpg" alt="Click Add a new page">
     </div>
     <div class="actions">
       <button class="secondary" data-go="18">Back</button>
@@ -415,19 +403,6 @@ button{
   </section>
 
   <section class="screen" data-step="20">
-    <div class="badge">5 of 6</div>
-    <h2>Set Highland as the startup page</h2>
-    <p class="instruction">Click Add a new page.</p>
-    <div class="image-card">
-      <img src="./images/add-new-page.jpg" alt="Click Add a new page">
-    </div>
-    <div class="actions">
-      <button class="secondary" data-go="19">Back</button>
-      <button class="next" data-go="21">Next</button>
-    </div>
-  </section>
-
-  <section class="screen" data-step="21">
     <div class="badge">6 of 6</div>
     <h2>Set Highland as the startup page</h2>
     <p class="instruction">Type https://www.highland.net and click Add.</p>
@@ -435,18 +410,31 @@ button{
       <img src="./images/type-highland-url.jpg" alt="Type Highland URL and add it">
     </div>
     <div class="actions">
-      <button class="secondary" data-go="20">Back</button>
-      <button class="next" data-go="22">Next</button>
+      <button class="secondary" data-go="19">Back</button>
+      <button class="next" data-go="21">Next</button>
     </div>
   </section>
 
   <!-- MAKE SHORTCUT -->
-  <section class="screen" data-step="22">
+  <section class="screen" data-step="21">
     <div class="badge">1 of 4</div>
     <h2>Add Highland to the desktop</h2>
     <p class="instruction">Open https://www.highland.net in Chrome.</p>
     <div class="image-card">
       <img src="./images/open-highland-site.jpg" alt="Open Highland in Chrome">
+    </div>
+    <div class="actions">
+      <button class="secondary" data-go="20">Back</button>
+      <button class="next" data-go="22">Next</button>
+    </div>
+  </section>
+
+  <section class="screen" data-step="22">
+    <div class="badge">2 of 4</div>
+    <h2>Add Highland to the desktop</h2>
+    <p class="instruction">Click the 3 dots, then click Cast, save, and share.</p>
+    <div class="image-card">
+      <img src="./images/cast-save-share.jpg" alt="Click Cast save and share">
     </div>
     <div class="actions">
       <button class="secondary" data-go="21">Back</button>
@@ -455,11 +443,11 @@ button{
   </section>
 
   <section class="screen" data-step="23">
-    <div class="badge">2 of 4</div>
+    <div class="badge">3 of 4</div>
     <h2>Add Highland to the desktop</h2>
-    <p class="instruction">Click the 3 dots, then click Cast, save, and share.</p>
+    <p class="instruction">Click Create shortcut.</p>
     <div class="image-card">
-      <img src="./images/cast-save-share.jpg" alt="Click Cast save and share">
+      <img src="./images/create-shortcut-menu.jpg" alt="Click Create shortcut">
     </div>
     <div class="actions">
       <button class="secondary" data-go="22">Back</button>
@@ -468,19 +456,6 @@ button{
   </section>
 
   <section class="screen" data-step="24">
-    <div class="badge">3 of 4</div>
-    <h2>Add Highland to the desktop</h2>
-    <p class="instruction">Click Create shortcut.</p>
-    <div class="image-card">
-      <img src="./images/create-shortcut-menu.jpg" alt="Click Create shortcut">
-    </div>
-    <div class="actions">
-      <button class="secondary" data-go="23">Back</button>
-      <button class="next" data-go="25">Next</button>
-    </div>
-  </section>
-
-  <section class="screen" data-step="25">
     <div class="badge">4 of 4</div>
     <h2>Add Highland to the desktop</h2>
     <p class="instruction">Click Create.</p>
@@ -488,7 +463,7 @@ button{
       <img src="./images/create-shortcut-confirm.jpg" alt="Click Create">
     </div>
     <div class="actions">
-      <button class="secondary" data-go="24">Back</button>
+      <button class="secondary" data-go="23">Back</button>
     </div>
   </section>
 
